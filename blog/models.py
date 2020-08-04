@@ -15,7 +15,7 @@ class BlogPost(models.Model):
     updated = models.DateTimeField(u"Обновлено", auto_now=True)
 
     class Meta:
-        ordering = ['-publish_date', '-timestamp', '-updated']  # сортировка
+        ordering = ['-publish_date', '-timestamp', '-updated']
         verbose_name = 'Публикация'
         verbose_name_plural = 'Публикации'
 
