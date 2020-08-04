@@ -3,15 +3,23 @@
 {% block content %}
 
 
+<main role="main">
+    <section>
+        {% include 'blog/header.html' %}
+    </section>
+    <div class="album py-5 bg-light">
+        <div class="container">
 
-    <div class="row">
-            {% for object in object_list %}
-            <ul>
-                <li>
-                {% include 'blog/list_inline.html' %}
-                </li>
-            </ul>
-            {% endfor %}
+            <div class="row">
+                {% for object in object_list %}
+                    <div class="col-md-4">
+                        {% include 'blog/list_inline.html' %}
+                    </div>
+                {% endfor %}
+            </div>
+
+        </div>
     </div>
+</main>
 
 {% endblock %}
