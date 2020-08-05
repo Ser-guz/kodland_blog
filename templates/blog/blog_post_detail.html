@@ -12,7 +12,7 @@
             {% if object.image %}
                 <img src="{{ object.image.url }}" class="card-img-top" />
             {% endif %}
-            <p class="text-justify">{{ object.content }}</p>
+            <p class="text-justify">{{ object.content|safe }}</p>
             <a
                 href="{{ object.get_edit_url }}"
                 class="btn btn-primary btn-sm active"
