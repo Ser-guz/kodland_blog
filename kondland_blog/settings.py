@@ -25,7 +25,7 @@ SECRET_KEY = 'r(6dtm$be7sy1yq*!-+p&=lm-ff3-k*dgc(xzu*r@m*@5p-ec1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['parashytov.pythonanywhere.com']
 
 # Application definition
 
