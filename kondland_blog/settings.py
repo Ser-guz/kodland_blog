@@ -25,7 +25,7 @@ SECRET_KEY = 'r(6dtm$be7sy1yq*!-+p&=lm-ff3-k*dgc(xzu*r@m*@5p-ec1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['parashytov.pythonanywhere.com']
+ALLOWED_HOSTS = ['parashytov.pythonanywhere.com', '127.0.0.1']
 
 # Application definition
 
@@ -126,13 +126,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [STATIC_DIR]
+# STATIC_URL = '/static/'
+# STATIC_DIR = os.path.join(BASE_DIR, 'static')
+# STATICFILES_DIRS = [STATIC_DIR]
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+
+STATIC_URL = "/static/"
+STATIC_ROOT = str(BASE_DIR + "/" + "_static")
+MEDIA_URL = "/media/"
+MEDIA_ROOT = str(BASE_DIR + "/" + "_media")
+
+STATIC_FILES = str(BASE_DIR + "/" + "static")
+STATICFILES_DIRS = [STATIC_FILES]
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
 
 # CKEDITOR_UPLOAD_PATH = "uploads/"
 #

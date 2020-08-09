@@ -5,7 +5,7 @@ User = settings.AUTH_USER_MODEL
 
 
 class BlogPost(models.Model):
-    user = models.ForeignKey(User, default=1, null=True, on_delete=models.SET_NULL, verbose_name='Пользователь')
+    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL, verbose_name='Пользователь')
     image = models.ImageField(u"Изображение", upload_to='images/', blank=True, null=True)
     slug = models.SlugField(u"Слаг", unique=True)
     title = models.CharField(u"Заголовок", max_length=50)
